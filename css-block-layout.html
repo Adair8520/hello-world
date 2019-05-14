@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-block-layout</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        /* width: 500px; */
+    }
+    .header{
+        background-color: black;
+    }
+    .header .header-main{
+        color: white;
+        width: 600px;
+        margin-left: calc(50% - 300px);
+    }
+    .main-par p{
+        margin: 20px auto;
+        width: 600px;   
+    }
+    .main{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .main div{
+        box-sizing: border-box;
+        width: 180px;
+        height: 40px;
+        border: 3px solid black;  
+        text-align: center;
+        line-height: 34px;
+        margin-top: 15px;
+        background-color:rgb(255,192,203)
+    }
+    .main div:nth-child(3n+2){
+        margin-left: 210px;
+        margin-top: -40px;
+    }
+    .main div:nth-child(3n+3){
+        margin-left: 420px;
+        margin-top: -40px;
+    }
+    .main div:hover{
+        background-color:rgb(255,0,0)
+    }
+    .fooder{
+        background-color: rgb(238,130,238)
+    }
+    .fooder p{
+        width:600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .link{
+        width: 600px;
+        margin: 20px auto;
+    }
+    .link div{
+        border-top: 1px dotted black;
+    }
+    .link div:first-child{
+        border-top: none;
+    }
+
+</style>
+<body>
+    <div class="header">
+        <div class="header-main">hello world 请调整浏览器窗口大小查看效果</div>
+    </div>
+    <div class="main-par">
+        <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+    </div>
+    <div class="main">
+        <div>宽180高40（包含块）</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>水平间隙30px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>垂直间隙30px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>边框宽度3px</div>
+        <div>产品</div>
+        <div>产品</div>
+    </div>
+    <div class="link">
+        <div>link</div>
+        <div>link</div>
+        <div>link</div>
+        <div>link</div>
+        <div>link</div>
+    </div>
+    <div class="fooder">
+        <p class="fooder-par">©版权所有</p>
+        <p class="fooder-par">本页所有布局均使用块元素</p>
+    </div>
+
+</body>
+</html>
