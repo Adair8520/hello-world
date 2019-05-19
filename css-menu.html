@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+      * {
+  font-size: 24px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+}
+
+ul.menu > li {
+  float: left;
+  padding: 0px 20px;
+}
+
+ul.menu > li > ul {
+  top: 100%;
+  left: 0;
+}
+
+ul.menu > li > ul::before {
+  content: none;
+}
+
+ul li {
+  position: relative;
+  padding-right: 40px;
+  white-space: nowrap;
+  background-color: pink;
+}
+li:hover {
+  background-color: orange;
+}
+li:hover > ul > li {
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
+  /* visibility: visible; */
+}
+ul ul::before {
+  content: '>';
+  position: absolute;
+  left: -1em;
+}
+ul ul li {
+  opacity:0;
+  /* visibility: hidden; */
+  /* display: none; */
+  transition: opacity .6s;
+}
+ul ul {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 100%;
+}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>文件
+      <ul>
+        <li>打开</li>
+        <li>保存
+          <ul>
+            <li>UTF-8
+              <ul>
+                <li>With BOM
+                  <ul>
+                    <li>aaa</li>
+                    <li>bbbbb</li>
+                    <li>cccc</li>
+                  </ul>
+                </li>
+                <li>With Out BOM</li>
+              </ul>
+            </li>
+            <li>ANSI</li>
+            <li>UTF-8 with BOM</li>
+          </ul>
+        </li>
+        <li>另存为…</li>
+      </ul>
+    </li>
+    <li>编辑</li>
+    <li>查找</li>
+    <li>选择</li>
+  </ul>
+</body>
+</html>
