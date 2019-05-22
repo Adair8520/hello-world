@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            width: 210px;
+            height: 100%;
+            background-color: pink;
+            float: left;
+        }
+        .right1{
+            width: 210px;
+            height: 100%;
+            background-color: pink;
+            float: right;
+        }
+        .right2{
+            width: 210px;
+            height: 100%;
+            background-color: red;
+            float: right;
+        }
+        .centertop{
+            width: calc(100% - 630px);
+            height: 20%;
+            background-color: yellow;
+            float: left;
+        }
+        div:last-child{
+            width: calc(100% - 630px);
+            height: 80%;
+            background-color: aqua;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">qqq</div>
+    <div class="right1">www</div>
+    <div class="right2">eee</div>
+    <div class="centertop">rrr</div>
+    <div class="centerbottom">zzz</div>
+</html>
