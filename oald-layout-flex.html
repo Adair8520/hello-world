@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        section > div:nth-child(1){
+            background-color: aqua;
+            flex: 1;
+        }
+        section > div:nth-child(2){
+            flex: 2
+        }
+        section > div:nth-child(3){
+            background-color: yellow;
+            flex: 1;
+        }
+        section > div:nth-child(4){
+            background-color: skyblue;
+            flex: 1;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+        .content > div:nth-child(1){
+            width: 100%;
+            height: 100px;
+            background-color: deepskyblue;
+        }
+        .content > div:nth-child(2){
+            width: 100%;
+            background-color: blue;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>oald7</div>
+        <div class="content">
+            <div>content</div>
+            <div></div>
+        </div>
+        <div>history</div>
+        <div>help</div>
+    </section>
+</body>
+</html>
