@@ -1,7 +1,7 @@
 <script type="xxx" id="ch0103/01">
   var a1 = Number(prompt("输入a1"))
   var a2 = Number(prompt("输入a2"))
-  an = a1 + a2
+  var an = a1 + a2
     console.log(an)
 </script>
 
@@ -9,7 +9,7 @@
   var a = Number(prompt("输入a"))
   var b = Number(prompt("输入b"))
   var c = Number(prompt("输入c"))
-  an = (a + b) * c
+  var an = (a + b) * c
     console.log(an)
 </script>
 
@@ -17,33 +17,33 @@
   var a = Number(prompt("输入a"))
   var b = Number(prompt("输入b"))
   var c = Number(prompt("输入c"))
-  an = (a + b) / c
-  an = parseInt(an)
+  var an = (a + b) / c
+  var an = parseInt(an)
     console.log(an)
 </script>
 
 <script type="xxx" id="ch0103/04">
   var a = Number(prompt("输入a"))
   var b = Number(prompt("输入b"))
-  an = a / b
-  an = parseInt(an)
-  bn = a - an * b
+  var an = a / b
+  var an = parseInt(an)
+  var bn = a - an * b
     console.log(an,bn)
 </script>
 
 <script type="xxx" id="ch0103/05">
   var a = Number(prompt("输入a"))
   var b = Number(prompt("输入b"))
-  an = a / b
-  an = an.toFixed(9)
+  var an = a / b
+  var an = an.toFixed(9)
     console.log(an)
 </script>
 
 <script type="xxx" id="ch0103/06">
   var a = Number(prompt("确诊数a"))
   var b = Number(prompt("死亡数b"))
-  an = b / a
-  an = an.toFixed(5) * 100 + "%"
+  var an = b / a
+  var an = an.toFixed(5) * 100 + "%"
     console.log(an)
 </script>
 
@@ -53,34 +53,34 @@
   var b = Number(prompt("请输入b"))
   var c = Number(prompt("请输入c"))
   var d = Number(prompt("请输入d"))
-  an =  a*x**3 + b*x**2 + c*x + d
-  an = an.toFixed(7)
+  var an =  a*x**3 + b*x**2 + c*x + d
+  var an = an.toFixed(7)
     console.log(an)
 </script>
 
 <script type="xxx" id="ch0103/08">
   var F = Number(prompt("请输入F"))
-  C = 5 * (F-32) / 9 
-  C = C.toFixed(5)
+  var C = 5 * (F-32) / 9 
+  var C = C.toFixed(5)
     console.log(C)
 </script>
 
 <script type="xxx" id="ch0103/09">
   var r = Number(prompt("请输入r"))
   var pi = Number(3.14159)
-  L = 2 * r
-  C = 2 * pi * r
-  S = pi * r * r
-  L = L.toFixed(4)
-  C = C.toFixed(4)
-  S = S.toFixed(4)
+  var L = 2 * r
+  var C = 2 * pi * r
+  var S = pi * r * r
+  var L = L.toFixed(4)
+  var C = C.toFixed(4)
+  var S = S.toFixed(4)
     console.log(L,C,S)
 </script>
 
 <script type="xxx" id="ch0103/10">
   var r1 = Number(prompt("请输入r1"))
   var r2 = Number(prompt("请输入r2"))
-  R = 1 / (1 / r1 + 1 / r2)
+  var R = 1 / (1 / r1 + 1 / r2)
   R = R.toFixed(2)
     console.log(R)
 </script>
@@ -97,7 +97,7 @@
 <script type="xxx" id="ch0103/12">
   var r = Number(prompt("请输入r"))
   var π = 3.14
-  V = 4 / 3 * π*r**3
+  var V = 4 / 3 * π*r**3
   V = V.toFixed(2)
     console.log(V)
 </script>
@@ -156,7 +156,7 @@
   var a1 = Number(prompt("输入a1"))
   var a2 = Number(prompt("输入a2"))
   var n = Number(prompt("输入n"))
-  an = a1 + (n - 1) * (a2 - a1)
+  var an = a1 + (n - 1) * (a2 - a1)
      console.log(an)
   </script>
 
@@ -428,3 +428,136 @@
   var y = Number(prompt("经过y小时"))
   console.log(a = n - Math.ceil(y / x))
 </script>
+
+<script type="xxx" id="ch0105/01">
+  var n = Number(prompt("请输入人数n"))
+  var sum = 0
+  for(var i=1;i<=n;i++){
+    sum = sum + Number(prompt("学生年龄"))
+  }
+  console.log((sum/n).toFixed(2))
+</script>
+  
+</script>
+
+<!-- <script id="ch0105/01">
+  var a = Number(prompt())
+  var b = 0
+  var c = 0
+  while(c < a){
+    c++;
+    b = b + (+prompt('fen' + c))
+  }
+  console.log((b / a).toFixed(2))
+  </script> -->
+
+  <script type="xxx" id="ch0105/02">
+    var sum = 0
+    for(var i=1;i<=12;i++){
+      sum = sum + Number(prompt("某个月的结余"))
+    }
+    console.log("$" + (sum/12).toFixed(2))
+  </script>
+
+<script type="xxx" id="ch0105/03">
+  var a = Number(prompt())
+  var sum = 0
+  for(var i=0;i<a;i++){
+    sum = sum + Number(prompt(""))
+  }
+  console.log((sum/a).toFixed(4))
+</script>
+
+<script type="xxx" id="ch0105/04">
+  var a = Number(prompt("有n个整数"))
+  var sum = 0
+  for(var i=1;i<=a;i++){
+    sum = sum + Number(prompt("它们的和"))
+  }
+  console.log(sum + " " + (sum/a).toFixed(5))
+</script>
+
+<script type="xxx" id="ch0105/05">
+  var n = Number(prompt("考试的人数n"))
+  var score = 0
+  var max = 0
+  for(var i=0;i<n;i++){
+    score = Number(prompt("学生的成绩"))
+    if(max < score){
+      max = score
+    }
+  }
+  console.log(max)
+</script>
+
+<script type="xxx" id="ch0105/06">
+  var n = Number(prompt("考试的人数n"))
+  var score = 0
+  var max = 0
+  for(var i=0;i<n;i++){
+    score = Number(prompt("学生的成绩"))
+    if(max < score){
+      max = score
+    }
+  }
+  console.log(max)
+</script>
+
+<script type="xxx" id="ch0105/07">
+  var n = Number(prompt("参与了n天的决赛"))
+  var x = 0
+  var y = 0
+  var z = 0
+  for(var i=1;i<=n;i++){
+    x += +prompt("请输入第" + i + "天的金牌数为")
+    y += +prompt("请输入第" + i + "天的金牌数为")
+    z += +prompt("请输入第" + i + "天的金牌数为")
+  }
+  console.log(x,y,z,x+y+z)
+</script>
+
+<script type="xxx" id="ch0105/08">
+  var n = Number(prompt("此为n边形有几边？"))
+  var x = 0
+  for(var i = 1; i < n; i++){
+    x += +prompt("请输入第" + i + "个角的度数")
+  }
+  console.log((n-2) * 180 - x)
+</script>
+
+<script id="ch0105/09" type="xxx">
+  var m = +prompt("请输入一个非负整数m (m<=n)")
+  var n = +prompt("请输入一个非负整数n (m<=n)")
+  var sum = 0
+  for (let a = m; a <= n; a++) {
+    if (a%2==1) {
+      sum += a
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/10" type="x">
+  var m = +prompt("请输入一个正整数m (m<=n)")
+  var n = +prompt("请输入一个正整数n (m<=n)")
+  var sum = 0
+  for (let a = m; a <= n; a++) {
+    if (a%17==0) {
+      sum += a
+    }
+  }
+  console.log(sum) 
+</script>
+
+<script id="ch0105/11" type="x">
+  var m = +prompt("请输入一个正整数k(1< k < 100)")
+
+  var sum = 0
+  for (let a = m; a <= n; a++) {
+    if (a%17==0) {
+      sum += a
+    }
+  }
+  console.log(sum) 
+</script>
+
