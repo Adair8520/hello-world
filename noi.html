@@ -529,9 +529,9 @@
   var m = +prompt("请输入一个非负整数m (m<=n)")
   var n = +prompt("请输入一个非负整数n (m<=n)")
   var sum = 0
-  for (let a = m; a <= n; a++) {
-    if (a%2==1) {
-      sum += a
+  for (var i = m; i <= n; i++) {
+    if (i%2==1) {
+      sum += i
     }
   }
   console.log(sum)
@@ -541,23 +541,42 @@
   var m = +prompt("请输入一个正整数m (m<=n)")
   var n = +prompt("请输入一个正整数n (m<=n)")
   var sum = 0
-  for (let a = m; a <= n; a++) {
-    if (a%17==0) {
-      sum += a
+  for (let i = m; i <= n; i++) {
+    if (i%17==0) {
+      sum += i
     }
   }
   console.log(sum) 
 </script>
 
-<script id="ch0105/11" type="x">
-  var m = +prompt("请输入一个正整数k(1< k < 100)")
-
-  var sum = 0
-  for (let a = m; a <= n; a++) {
-    if (a%17==0) {
-      sum += a
-    }
+<script id="ch0105/11" type="xxx">
+  var k = Number(prompt("请输入一个正整数k(1<k<100)"))
+  var num = 0
+  var times1 = 0
+  var times2 = 0
+  var times3 = 0
+  for (var i=0; i<k; i++) {
+    num = Number(prompt("出现1和5和10出现"))
+    if (num == 1) {times1++}
+    if (num == 5) {times2++}
+    if (num == 10) {times3++}
   }
-  console.log(sum) 
+  console.log(times1)
+  console.log(times2)
+  console.log(times3)
 </script>
 
+<script id="ch0105/12" type="">
+  var N = Number(prompt("请输入一个整数(N <= 100)"))
+  var m = Number(prompt("请输入指定的数字"))
+  
+  for (var i=0; i<k; i++) {
+    num = Number(prompt("出现1和5和10出现"))
+    if (num == 1) {times1++}
+    if (num == 5) {times2++}
+    if (num == 10) {times3++}
+  }
+  console.log(times1)
+  console.log(times2)
+  console.log(times3)
+</script>
