@@ -566,17 +566,123 @@
   console.log(times3)
 </script>
 
-<script id="ch0105/12" type="">
-  var N = Number(prompt("请输入一个整数(N <= 100)"))
-  var m = Number(prompt("请输入指定的数字"))
-  
-  for (var i=0; i<k; i++) {
-    num = Number(prompt("出现1和5和10出现"))
-    if (num == 1) {times1++}
-    if (num == 5) {times2++}
-    if (num == 10) {times3++}
+<script id="ch0105/12" type="xxx">
+  var N = +prompt("请输入一个整数(N <= 100)")
+  var m = +prompt("请输入指定的数字")
+  var c = 0
+  var p ;
+  for (var i = 0; i < N; i++) {
+    p = +prompt()
+    if(p === m){
+      c++;
+    }
   }
-  console.log(times1)
-  console.log(times2)
-  console.log(times3)
+  console.log(c)
+</script>
+
+<!-- <script id="ch0105/12" type="">
+  var n = +prompt();
+  var p = +prompt();
+  var c = 0;
+  var m ;
+  for (var i = 0; i < n ; i ++) {
+    m = +prompt();
+    if (m === p) c ++ ;
+  }
+  console.log(c);
+</script> -->
+
+<script id="ch0105/13" type="xx">
+  var a = +prompt("请输入一个整数(-1000000 <= a <= 1000000)")
+  var n = +prompt("请输入指定的数字n(1 <= n <= 10000)")
+  if (Math.abs(a**n) <= 1000000)
+  console.log(a**n)
+</script>
+
+<script id="ch0105/14" type="xx">
+  var x = +prompt("请输入人口基数")
+  var n = +prompt("请输入n年后")
+  for (var i = 0; i < n; i++ ){
+    x += (x *0.001)
+  }
+  console.log(x.toFixed(4))
+</script>
+
+<script id="ch0105/15" type="xxx">
+  var R = +prompt("复合年利率R")
+  var M = +prompt("现有总值M钱")
+  var Y = +prompt("投资Y年")
+  for(var i=0;i<Y;i++){
+    M = (1+R*0.01)*M
+  }
+  console.log(Math.floor(M));
+</script>
+
+<script id="ch0105/16" type="xxx">
+  var N = +prompt("年薪N万")
+  var k = +prompt("请输入增长率K")
+  var money = 0
+  var price =200
+  for(var year = 0; year <= 20 && money < price; year++){
+    money += N;
+     if(year >= 1){
+       price = (1 + 0.01*k)*price;
+     }
+  }
+  if(year > 20){
+    console.log("Impossible")
+  } else{
+    console.log(year)
+  }
+</script>
+
+<script id="ch0105/17"  type="">
+  var k = +prompt("出一个正整数k")
+  var t1 = 1
+  var t2 = 1
+  var sum;
+  for(var i = 2; i < k; i++){
+    sum = t1 + t2
+    t1 = t2;
+    t2 = sum;
+  }
+  console.log(sum)
+</script>
+
+<!-- <script type="" id="ch0105/17">
+  var k = Number(prompt())
+var first = 1
+var second = 1
+var s = 1
+if ((k === 1) || (k === 2)) {
+  s = 1
+  console.log(s)
+}
+if (k > 2) {
+  for (i = 3; i <= k;i++) {
+    s = first + second
+    first = second
+    second = s
+  }
+  console.log(s)
+} -->
+
+
+<script id="ch0105/18" type="xxx">
+  var n = +prompt();
+  var m0 = +prompt();
+  var p0 = +prompt();
+  var k =  p0 / m0;
+  for (var i = 0; i < n - 1 ; i ++) {
+    m = +prompt();
+    p = +prompt();
+    if( p / m - k > 0.05) {
+      console.log("better")
+    }else if( k - p / m  > 0.05) {
+      console.log("worse")
+    }else {
+      console.log("same")
+    }
+
+  }
 </script>
