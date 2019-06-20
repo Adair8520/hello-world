@@ -686,3 +686,18 @@ if (k > 2) {
 
   }
 </script>
+
+<script id="ch0105/37" type="">
+  var M = +prompt()
+  var N = +prompt()
+  var X = +prompt()
+  var p = 0;
+  for(i=X;i>0;i--){
+    if(N<M&&p<M){
+      p = p + N
+    }
+  } else {
+    p = p.mathfloor(N / M)
+    console.log()
+  }
+
