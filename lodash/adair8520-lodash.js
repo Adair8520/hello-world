@@ -1,5 +1,13 @@
 var adair8520 = {
-  compact: function(ary) {
+  chunk: function chunk(array, size = 1) {
+    let res = []
+    for (let i = 0; i < array.length; i += size) {
+      res.push(array.slice(i, i + size))
+    }
+    return res
+  },
+
+  compact: function compact(ary) {
     return ary.filter(it => it)
   },
 
@@ -13,5 +21,4 @@ var adair8520 = {
       }
     }
     return result
-  }
-}
+  },
