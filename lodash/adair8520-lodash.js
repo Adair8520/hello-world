@@ -2,7 +2,8 @@ var adair8520 = {
   chunk: function chunk(array, size = 1) {
     let res = []
     for (let i = 0; i < array.length; i += size) {
-      res.push(array.slice(i, i + size))
+      let item = array.slice(i, i + size)
+      res.push(item)
     }
     return res
   },
