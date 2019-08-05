@@ -1,8 +1,8 @@
 var adair8520 = {
-  chunk: function chunk(array, size = 1) {
+  chunk: function chunk(ary, size = 1) {
     let res = []
-    for (let i = 0; i < array.length; i += size) {
-      let item = array.slice(i, i + size)
+    for (let i = 0; i < ary.length; i += size) {
+      let item = ary.slice(i, i + size)
       res.push(item)
     }
     return res
@@ -12,9 +12,8 @@ var adair8520 = {
     return ary.filter(it => it)
   },
 
-  difference: function difference(array, ...value) {
-    let array = []
-
+  difference: function difference(ary, ...value) {
+    ary = []
   },
 
   flatten: function flatten(ary) {
@@ -36,4 +35,23 @@ var adair8520 = {
   isArray: function isArray(value) {
     return Object.prototype.toString.call(value) === "[Object Array]"
   },
+
+  isMatch: function isMatch(obj, src) {
+    if(obj === src) {
+      return true
+    }
+    for(var key in src) {
+      if (typeof src[key] == 'object' && src[key] != null) {
+        if(!isMatch(obj[key], src[key])) {
+          return false
+        }
+      } else {
+          if(obj[key] != src[key]) {
+            return false
+          }
+        }
+      }
+      return true
+  },
+
 }
