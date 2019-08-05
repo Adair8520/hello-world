@@ -36,3 +36,4 @@ var adair8520 = {
   isArray: function isArray(value) {
     return Object.prototype.toString.call(value) === "[Object Array]"
   },
+}
