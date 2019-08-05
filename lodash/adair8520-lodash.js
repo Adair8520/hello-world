@@ -12,7 +12,12 @@ var adair8520 = {
     return ary.filter(it => it)
   },
 
-  flatten:function flatten(ary) {
+  difference: function difference(array, ...value) {
+    let array = []
+
+  },
+
+  flatten: function flatten(ary) {
     var result = []
     for(var item of ary) {
       if (Array.isArray(item)) {
@@ -22,4 +27,12 @@ var adair8520 = {
       }
     }
     return result
+  },
+
+  isArgumengts: function isArgumengts(value) {
+    return Object.prototype.toString.call(value) === "[Object Arguments]"
+  },
+
+  isArray: function isArray(value) {
+    return Object.prototype.toString.call(value) === "[Object Array]"
   },
