@@ -17,7 +17,7 @@ var adair8520 = {
     for(let value of values) {
       arr2 = arr2.concat(value)
     }
-    return arr1.filter(arr1=>arr2.indexOf(arr1))
+    return arr1.filter(arr1 => arr2.indexOf(arr1) == -1)
   },
 
   flatten: function flatten(ary) {
