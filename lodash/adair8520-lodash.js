@@ -12,8 +12,12 @@ var adair8520 = {
     return ary.filter(it => it)
   },
 
-  difference: function difference(ary, ...value) {
-    ary = []
+  difference: function difference(arr1, ...values) {
+    var arr2 = []
+    for(let value of values) {
+      arr2 = arr2.concat(value)
+    }
+    return arr1.filter(arr1=>arr2.indexOf(arr1))
   },
 
   flatten: function flatten(ary) {
@@ -53,5 +57,18 @@ var adair8520 = {
       }
       return true
   },
+
+  bind: function bind(f, thisArg, ...fixedArgs) {
+    return function(...args) {
+      var acturalArgs = [...fixedArgs]
+      for(var i = 0; i < acturalArgs.length; i++) {
+        if (acturalArgs[i] === window) {
+          acturalArgs[i] = args.shift()
+        }
+      }
+      acturalArgs.push(...args)
+      return f.apply(thisArg, acturalArgs)
+    }
+  }
 
 }
