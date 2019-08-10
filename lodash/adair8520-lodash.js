@@ -20,6 +20,8 @@ var adair8520 = {
     return arr1.filter(arr1 => arr2.indexOf(arr1) == -1)
   },
 
+
+  
   flatten: function flatten(ary) {
     var result = []
     for(var item of ary) {
